@@ -1,3 +1,5 @@
+@import "./btnConfig";
+@import "./utilities";
 
 * {
   box-sizing: border-box;
@@ -19,6 +21,8 @@ a {
   text-decoration: none;
 }
 
+$y-padding: 50px;
+
 .hero {
   // This is where the bulk of the SCSS styling needs to be done
 
@@ -28,6 +32,61 @@ a {
   // 1. $variables
   // 2. nesting (dont forget about the ampersand (&) parent selector!)
   // 3. At-Rules
+  height: 100vh;
+  min-height: 500px;
+  width: 100%;
+  overflow: hidden;
+  min-width: 1000px;
+  color: white;
+
+
+  .box {
+    background-color: $primary-color;
+    width: 100vw;
+    height: calc(100vh - $y-padding);
+    padding: 0 30px;
+    max-width: unset;
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: right;
+        gap: 20px;
+
+        a {
+          color: white;
+        }
+        
+
+      }
+    }
+    .hero-content {
+
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 50px;
+
+      img {
+        max-height: 100%;
+
+      }
+    }
+  }
+
+
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
